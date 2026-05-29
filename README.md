@@ -1,7 +1,55 @@
 # Microring Compact Model Extension
 
-This folder is a clean extension of the original microring course project. It
-does not modify the original report, Lumerical files, figures, or `MMR.py`.
+This repository extends an undergraduate Lumerical/Python microring resonator
+project into a small silicon photonics modeling workflow. It combines analytical
+compact models, scientific Python data analysis, differentiable optimization,
+and open-source FDTD simulations to study microring and racetrack resonators for
+optical interconnect-oriented applications.
+
+The project is intentionally staged: fast compact models are used for design
+space exploration, while Meep FDTD examples provide field maps and transmission
+spectra that resemble a lightweight open-source version of a Lumerical workflow.
+The current examples cover all-pass rings, add-drop rings, racetrack add-drop
+resonators, coupling sweeps, high-Q compact optimization, and optional JAX-based
+differentiable design.
+
+## Highlights
+
+- Unit-consistent silicon microring compact model with separated `n_eff` and
+  `n_g`
+- Automatic extraction of resonance wavelength, FSR, loaded Q, extinction ratio,
+  and phase response
+- SciPy/pandas/xarray workflow for design sweeps and fitted resonance metrics
+- JAX example demonstrating gradient-based optimization through a microring
+  transfer function
+- Meep 2D effective-index FDTD examples for straight waveguides, single-bus
+  rings, add-drop rings, and racetrack add-drop resonators
+- Compact-model optimizers for add-drop and high-Q racetrack designs
+- Research notes on curvature engineering, thermal effects, and future 3D FDTD
+  extensions
+
+## Example Results
+
+The racetrack add-drop FDTD example demonstrates strong port transfer after
+adding straight coupling sections:
+
+```text
+Through minimum = 0.0086 at 1.6313 um
+Drop maximum    = 1.0099 at 1.6313 um
+```
+
+The high-Q racetrack compact optimizer finds a candidate design with:
+
+```text
+Loaded Q        ~= 8.0e4
+Drop peak       ~= 0.785
+Through at peak ~= 0.013
+FSR             ~= 4.87 nm
+```
+
+These results are exploratory rather than foundry-calibrated. The goal is to
+build a transparent modeling and optimization workflow that can later be
+calibrated against Lumerical MODE/FDTD, measured data, or a process design kit.
 
 ## Step 1 Goal
 
