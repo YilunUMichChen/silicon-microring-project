@@ -1,0 +1,6 @@
+.cache/
+.mplconfig/
+.venv-jax/
+envs/
+__pycache__/
+*.pyc

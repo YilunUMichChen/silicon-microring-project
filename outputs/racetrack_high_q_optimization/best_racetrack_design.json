@@ -1,0 +1,24 @@
+{
+  "optimizer": "scipy.optimize.differential_evolution",
+  "objective": "high-Q racetrack add-drop compact optimization",
+  "target_nm": 1550.0,
+  "n_eff": 2.4,
+  "n_g": 4.0,
+  "loss_db_cm": 1.0,
+  "best": {
+    "score": 10.453821490473617,
+    "radius_um": 18.307830008118287,
+    "coupling_length_um": 4.154375788274821,
+    "gap_um": 0.21680679297241354,
+    "kappa": 0.10476330100073361,
+    "round_trip_length_um": 123.34024008989999,
+    "peak_nm": 1549.895,
+    "detuning_nm": 0.10500000000001819,
+    "drop_peak": 0.7849910219659985,
+    "through_at_peak": 0.012996201983170922,
+    "er_db": 18.86166480909459,
+    "q_loaded": 79999.99885733832,
+    "fsr_nm": 4.869659727938081
+  },
+  "minimized_objective": -10.453821490473617
+}

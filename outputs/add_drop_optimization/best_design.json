@@ -1,0 +1,23 @@
+{
+  "optimizer": "scipy.optimize.differential_evolution",
+  "objective": "maximize drop peak near 1550 nm, through extinction, ER; penalize detuning/Q/low FSR",
+  "target_nm": 1550.0,
+  "n_eff": 2.4,
+  "n_g": 4.0,
+  "loss_db_cm": 2.0,
+  "best": {
+    "score": 7.966009448894885,
+    "radius_um": 3.9059275537387643,
+    "kappa1": 0.30740798638429917,
+    "kappa2": 0.30684757294246945,
+    "peak_nm": 1550.0,
+    "detuning_nm": 0.0,
+    "drop_peak": 0.9886768940235267,
+    "through_at_peak": 1.4155450462629137e-05,
+    "through_baseline": 0.9974573703848727,
+    "er_db": 48.47970649473113,
+    "q_loaded": 2000.1078022403995,
+    "analytic_fsr_nm": 24.47368426049487
+  },
+  "minimized_objective": -7.966009448894885
+}
