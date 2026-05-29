@@ -12,7 +12,7 @@ import importlib.util
 import os
 import pathlib
 
-PROJECT_DIR = pathlib.Path(__file__).resolve().parents[1]
+PROJECT_DIR = pathlib.Path(__file__).resolve().parents[2]
 OUTPUT_DIR = PROJECT_DIR / "outputs" / "meep_add_drop_2d"
 os.environ.setdefault("MPLCONFIGDIR", str(PROJECT_DIR / ".mplconfig"))
 os.environ.setdefault("XDG_CACHE_HOME", str(PROJECT_DIR / ".cache"))
@@ -21,7 +21,7 @@ if importlib.util.find_spec("meep") is None:
     raise SystemExit(
         "Meep is not installed in this Python environment.\n"
         "Use the local Meep environment:\n"
-        "  envs/meep-demo/bin/python scripts/run_meep_add_drop_microring_2d.py"
+        "  envs/meep-demo/bin/python scripts/fdtd/run_meep_add_drop_microring_2d.py"
     )
 
 import matplotlib.pyplot as plt

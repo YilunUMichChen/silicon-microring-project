@@ -23,16 +23,10 @@ Current scope:
 ## Files
 
 - `src/microring_model.py`: reusable compact-model functions
-- `scripts/run_step1_demo.py`: demo script that prints metrics and writes plots
-- `scripts/run_toolchain_example.py`: example using SciPy, pandas, and xarray
-- `scripts/run_jax_example.py`: optional differentiable compact-model example
-- `scripts/run_meep_minimal_waveguide.py`: optional Meep FDTD smoke test
-- `scripts/run_meep_microring_2d.py`: optional 2D effective-index microring FDTD example
-- `scripts/run_meep_add_drop_microring_2d.py`: optional add-drop microring FDTD example
-- `scripts/run_meep_racetrack_add_drop_2d.py`: optional racetrack add-drop FDTD example
-- `scripts/optimize_add_drop_compact.py`: SciPy compact-model optimizer for add-drop rings
-- `scripts/optimize_racetrack_high_q_compact.py`: high-Q racetrack add-drop compact optimizer
-- `scripts/run_meep_add_drop_param_sweep.py`: small Meep FDTD validation sweep
+- `scripts/compact/`: compact-model demos and scientific Python workflow examples
+- `scripts/fdtd/`: Meep FDTD examples and validation sweeps
+- `scripts/optimization/`: SciPy compact-model optimizers
+- `scripts/jax/`: optional differentiable compact-model example
 - `OPTIONAL_TOOLING.md`: setup notes for JAX and Meep
 - `outputs/`: generated figures
 
@@ -41,7 +35,7 @@ Current scope:
 From this folder:
 
 ```bash
-/opt/anaconda3/bin/python3 scripts/run_step1_demo.py
+/opt/anaconda3/bin/python3 scripts/compact/run_step1_demo.py
 ```
 
 On this machine, the parent project currently resolves `python3` to Anaconda,
@@ -65,7 +59,7 @@ Python tools:
 Run:
 
 ```bash
-/opt/anaconda3/bin/python3 scripts/run_toolchain_example.py
+/opt/anaconda3/bin/python3 scripts/compact/run_toolchain_example.py
 ```
 
 Expected generated artifacts:

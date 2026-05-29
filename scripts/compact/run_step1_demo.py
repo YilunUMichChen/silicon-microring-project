@@ -6,7 +6,7 @@ import pathlib
 import sys
 import os
 
-PROJECT_DIR = pathlib.Path(__file__).resolve().parents[1]
+PROJECT_DIR = pathlib.Path(__file__).resolve().parents[2]
 SRC_DIR = PROJECT_DIR / "src"
 OUTPUT_DIR = PROJECT_DIR / "outputs"
 os.environ.setdefault("MPLCONFIGDIR", str(PROJECT_DIR / ".mplconfig"))

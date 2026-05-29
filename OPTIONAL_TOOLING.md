@@ -14,14 +14,14 @@ with gradient-based methods.
 Example file:
 
 ```bash
-scripts/run_jax_example.py
+scripts/jax/run_jax_example.py
 ```
 
 Typical separate-environment install:
 
 ```bash
 python -m pip install "jax[cpu]"
-python scripts/run_jax_example.py
+python scripts/jax/run_jax_example.py
 ```
 
 In this project folder, a local test environment was created with:
@@ -29,7 +29,7 @@ In this project folder, a local test environment was created with:
 ```bash
 /opt/anaconda3/bin/python3 -m venv .venv-jax
 .venv-jax/bin/python -m pip install "jax[cpu]"
-.venv-jax/bin/python scripts/run_jax_example.py
+.venv-jax/bin/python scripts/jax/run_jax_example.py
 ```
 
 This example optimizes a simple coupling-coefficient objective using
@@ -49,7 +49,7 @@ than to the compact model, but it requires more setup and longer simulations.
 Example file:
 
 ```bash
-scripts/run_meep_minimal_waveguide.py
+scripts/fdtd/run_meep_minimal_waveguide.py
 ```
 
 Typical separate conda environment:
@@ -57,14 +57,14 @@ Typical separate conda environment:
 ```bash
 conda create -n meep-demo -c conda-forge pymeep python=3.11
 conda activate meep-demo
-python scripts/run_meep_minimal_waveguide.py
+python scripts/fdtd/run_meep_minimal_waveguide.py
 ```
 
 In this project folder, a local conda-prefix environment was created with:
 
 ```bash
 /opt/anaconda3/bin/conda create --prefix ./envs/meep-demo -c conda-forge pymeep python=3.11 -y
-envs/meep-demo/bin/python scripts/run_meep_minimal_waveguide.py
+envs/meep-demo/bin/python scripts/fdtd/run_meep_minimal_waveguide.py
 ```
 
 The example is intentionally a straight-waveguide smoke test, not a full
@@ -79,7 +79,7 @@ microring simulation. A good progression is:
 There is also a first 2D effective-index microring example:
 
 ```bash
-envs/meep-demo/bin/python scripts/run_meep_microring_2d.py
+envs/meep-demo/bin/python scripts/fdtd/run_meep_microring_2d.py
 ```
 
 It saves a dielectric/field map, a normalized through-port transmission plot,

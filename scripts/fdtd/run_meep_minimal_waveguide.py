@@ -12,7 +12,7 @@ is distributed through conda-forge, for example:
 
     conda create -n meep-demo -c conda-forge pymeep python=3.11
     conda activate meep-demo
-    python scripts/run_meep_minimal_waveguide.py
+    python scripts/fdtd/run_meep_minimal_waveguide.py
 """
 
 from __future__ import annotations
@@ -21,7 +21,7 @@ import importlib.util
 import os
 import pathlib
 
-PROJECT_DIR = pathlib.Path(__file__).resolve().parents[1]
+PROJECT_DIR = pathlib.Path(__file__).resolve().parents[2]
 OUTPUT_DIR = PROJECT_DIR / "outputs"
 os.environ.setdefault("MPLCONFIGDIR", str(PROJECT_DIR / ".mplconfig"))
 os.environ.setdefault("XDG_CACHE_HOME", str(PROJECT_DIR / ".cache"))
@@ -32,7 +32,7 @@ if importlib.util.find_spec("meep") is None:
         "A typical conda-forge setup is:\n"
         "  conda create -n meep-demo -c conda-forge pymeep python=3.11\n"
         "  conda activate meep-demo\n"
-        "  python scripts/run_meep_minimal_waveguide.py"
+        "  python scripts/fdtd/run_meep_minimal_waveguide.py"
     )
 
 import meep as mp

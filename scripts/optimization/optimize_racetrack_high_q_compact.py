@@ -22,7 +22,7 @@ import json
 import os
 import pathlib
 
-PROJECT_DIR = pathlib.Path(__file__).resolve().parents[1]
+PROJECT_DIR = pathlib.Path(__file__).resolve().parents[2]
 OUTPUT_DIR = PROJECT_DIR / "outputs" / "racetrack_high_q_optimization"
 os.environ.setdefault("MPLCONFIGDIR", str(PROJECT_DIR / ".mplconfig"))
 os.environ.setdefault("XDG_CACHE_HOME", str(PROJECT_DIR / ".cache"))

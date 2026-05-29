@@ -19,14 +19,14 @@ if importlib.util.find_spec("jax") is None:
         "JAX is not installed in this Python environment.\n"
         "Try a separate environment first, then run:\n"
         "  python -m pip install \"jax[cpu]\"\n"
-        "  python scripts/run_jax_example.py"
+        "  python scripts/jax/run_jax_example.py"
     )
 
 import jax
 import jax.numpy as jnp
 
 
-PROJECT_DIR = pathlib.Path(__file__).resolve().parents[1]
+PROJECT_DIR = pathlib.Path(__file__).resolve().parents[2]
 
 
 def all_pass_transmission(lambda_nm: jnp.ndarray, radius_um: float, n_eff: float, n_g: float, loss_db_cm: float, kappa: float) -> jnp.ndarray:
